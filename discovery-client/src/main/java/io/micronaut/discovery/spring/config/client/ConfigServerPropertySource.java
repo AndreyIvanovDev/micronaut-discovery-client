@@ -18,9 +18,11 @@ package io.micronaut.discovery.spring.config.client;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import io.micronaut.core.annotation.Internal;
+import io.micronaut.core.annotation.Introspected;
 import io.micronaut.core.annotation.NonNull;
 import io.micronaut.core.annotation.ReflectiveAccess;
 
+import io.micronaut.serde.annotation.Serdeable;
 import java.util.Collections;
 import java.util.Map;
 
@@ -30,6 +32,7 @@ import java.util.Map;
  *  @author Thiago Locatelli
  *  @since 1.1.0
  */
+@Serdeable
 @ReflectiveAccess
 public class ConfigServerPropertySource {
 
@@ -72,5 +75,4 @@ public class ConfigServerPropertySource {
     public String toString() {
         return "ConfigServerPropertySource [name=" + name + "]";
     }
-
 }
